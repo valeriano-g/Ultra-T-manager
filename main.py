@@ -13,10 +13,9 @@ def main():
         print("2. Create a Task")
         print("3. Update a Task")
         print("4. Delete a Task")
-        print("5. Filter Tasks by Status")
-        print("6. Filter Tasks by Category")
-        print("7. Filter Tasks by Priority")
-        print("8. Exit")
+        print("5 filter tasks")
+        print("6. Exit")
+        print("====================")
 
 #Get user input for menu choice
         choice = input("Please select an option: ")
@@ -54,16 +53,9 @@ def main():
             task_manager.delete_task(task_id)
         elif choice == "5":
 #Option 5: Filter tasks by status
-            status = input("Enter status to filter by: ")
-            task_manager.filter_by_status(status)
-        elif choice == "6":
-#Option 6: Filter tasks by category
-            category = input("Enter category to filter by: ")
-            task_manager.filter_by_category(category)
-        elif choice == "7":
-#Option 7: Filter tasks by priority
-            priority = input("Enter priority to filter by: ")
-            task_manager.filter_by_priority(priority)
+            filter_type = input("Type the type of filter (Category, Priority or Deadline): ").lower()
+            filter_value = input(f"Type the value to filter by {filter_type}: ")
+            task_manager.filter_tasks(filter_type, filter_value)
 #Option 8: Exit the program
         elif choice == "8":
             print("Exiting, please wait...")
