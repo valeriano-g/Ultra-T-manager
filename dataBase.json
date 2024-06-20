@@ -22,5 +22,13 @@
         "priority": "A",
         "category": "TRABAJO",
         "status": "I"
+    },
+    {
+        "id": "4f34f8c5-44ce-4be5-a0a0-c4fda590f8cd",
+        "description": "comer una pizza",
+        "deadline": "2024-09-20",
+        "priority": "A",
+        "category": "COMIDA",
+        "status": "P"
     }
 ]
