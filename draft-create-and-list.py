@@ -1,6 +1,7 @@
 import json
 import os
 import uuid
+from datetime import datetime
 
 # Global variables
 tasklocation = "./dataBase.json"
@@ -15,9 +16,9 @@ def create_task(description, deadline, priority, category, status):
         "id": id_task,
         "description": description,
         "deadline": deadline,
-        "priority": priority,
+        "priority": priority.upper(),  # Convert priority to uppercase
         "category": category,
-        "status": status,
+        "status": status.upper()[0],  # Convert status to uppercase and take the first character
     }
 
     # Read existing tasks from the JSON file
@@ -61,16 +62,41 @@ def list_tasks():
         deadline = task['deadline']
         category = task['category']
         status = task['status']
-        print(f"{"-"*10}#{i} {description} {"-"*10}\n  Category: {category} Priority: {priority}   Status: {status}   Deadline: {deadline}   ")
+        print(f"{'-'*10}#{i} {description} {'-'*10}\n  Category: {category} Priority: {priority}   Status: {status}   Deadline: {deadline}   ")
 
 
 # Example usage
 if __name__ == "__main__":
     description = input("Enter task description: ")
-    deadline = input("Enter deadline: ")
-    priority = input("Enter priority (A = CRUCIAL  B = IMPORTANT   C = NOT IMPORTANT): ")
-    category = input("Enter category: ")
-    status = input("Enter status (P = PENDING  I = in progress  C = completed): ")
+    
+    # Validate the deadline input
+    while True:
+        deadline = input("Enter deadline (YYYY-MM-DD): ")
+        try:
+            datetime.strptime(deadline, "%Y-%m-%d")
+            break
+        except ValueError:
+            print("Invalid date format. Please enter the date in YYYY-MM-DD format.")
+    
+    # Validate priority
+    validationPriority = ['A', 'B', 'C']
+    while True:
+        priority = input("Enter priority (A = CRUCIAL  B = IMPORTANT   C = NOT IMPORTANT): ").upper()
+        if priority in validationPriority:
+            break
+        else:
+            print("Invalid format. You have to write A, B, or C.")
+    
+    category = input("Enter category: ").upper()
+    
+    # Validate status
+    validationStatus = ['P', 'I', 'C']
+    while True:
+        status = input("Enter status (P = PENDING  I = in progress  C = completed): ").upper()
+        if status in validationStatus:
+            break
+        else:
+            print("Invalid format. You have to write P, I, or C.")
 
     create_task(description, deadline, priority, category, status)
     list_tasks()

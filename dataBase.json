@@ -1,42 +1,18 @@
 [
-  {
-    "id": "aa19a633-81fd-4dec-984f-33185a3f94dd",
-    "description": "ddddd",
-    "deadline": "d",
-    "priority": "",
-    "category": "d",
-    "status": "d"
-  },
-  {
-    "id": "cf45e87d-1ece-4ba6-88dd-862e49f27ee4",
-    "description": "dnsinjnd",
-    "deadline": "",
-    "priority": "w",
-    "category": "sdd",
-    "status": "f"
-  },
-  {
-    "id": "a906f611-3eb6-43b8-960a-f18e08e91b3d",
-    "description": "hacer la tarea de fundamentos del computador",
-    "deadline": "20/5/2024",
-    "priority": "A",
-    "category": "trabajo",
-    "status": "P"
-  },
-  {
-    "id": "a906f611-3eb6-43b8-960a-f18e08e91b3d",
-    "description": "hacer la tarea de fundamentos",
-    "deadline": "20/5/2024",
-    "priority": "B",
-    "category": "universidad",
-    "status": "P"
-  },
-  {
-    "id": "a906f611-3eb6-43b8-960a-f18e08e91b3d",
-    "description": "hacer la tarea de fundamentos de redes",
-    "deadline": "20/5/2024",
-    "priority": "B",
-    "category": "universidad",
-    "status": "P"
-  }
+    {
+        "id": "be118363-944c-4447-b4e2-66bd469169cd",
+        "description": "trabajar",
+        "deadline": "2024-02-23",
+        "priority": "A",
+        "category": "TRABAJO",
+        "status": "P"
+    },
+    {
+        "id": "5e31cda5-adc3-42bb-ad5a-b68886b52ad4",
+        "description": "estudiar",
+        "deadline": "2024-03-29",
+        "priority": "A",
+        "category": "ESTUDIAR",
+        "status": "I"
+    }
 ]
