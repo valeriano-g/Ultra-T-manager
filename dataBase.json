@@ -14,5 +14,13 @@
         "priority": "A",
         "category": "ESTUDIAR",
         "status": "I"
+    },
+    {
+        "id": "082d432e-4988-4bef-95c3-e4efca13f885",
+        "description": "djddd",
+        "deadline": "2024-09-06",
+        "priority": "A",
+        "category": "TRABAJO",
+        "status": "I"
     }
 ]

@@ -1,7 +1,7 @@
 
 
 #from task_management.task_manager import TaskManager: Imports TaskManager class from task_manager.py
-from task_management.task_manager import TaskManager
+from task_management_copy import TaskManager
 
 #Enters a loop to display a menu and handle user input for various operations andd executes operations based on user input
 def main():
@@ -60,7 +60,7 @@ def main():
         elif choice =="6":
          classification_type = input("Enter the classification type: ")
          task_manager.clasify_task(classification_type)
-          #Option 8: Exit the program
+          #Option 7: Exit the program
         elif choice == "7":
             print("Exiting, please wait...")
             break  

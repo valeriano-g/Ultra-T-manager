@@ -81,7 +81,7 @@ if __name__ == "__main__":
     # Validate priority
     validationPriority = ['A', 'B', 'C']
     while True:
-        priority = input("Enter priority (A = CRUCIAL  B = IMPORTANT   C = NOT IMPORTANT): ").upper()
+        priority = input("Enter priority (A = CRUCIAL  B = IMPORTANT   C = SIGNIFICANT): ").upper()
         if priority in validationPriority:
             break
         else:
@@ -92,7 +92,7 @@ if __name__ == "__main__":
     # Validate status
     validationStatus = ['P', 'I', 'C']
     while True:
-        status = input("Enter status (P = PENDING  I = in progress  C = completed): ").upper()
+        status = input("Enter status (P = PENDING  I = IN PROGRESS...  C = completed): ").upper()
         if status in validationStatus:
             break
         else:
