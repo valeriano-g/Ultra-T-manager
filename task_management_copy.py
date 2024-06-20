@@ -126,4 +126,8 @@ class TaskManager:
                 print(f"{'-'*10} CATEGORY {category} {'-'*10}")
                 for i, task in enumerate(tasks, start=1):
                     if task['category'] == category:
+<<<<<<< HEAD
                         print(f"#{i} Task:")
+=======
+                        print(f"#{i} Task:
+>>>>>>> b1a8c4f204d102f5a90221a56e6036e825ec0180
