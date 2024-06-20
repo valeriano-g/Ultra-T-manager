@@ -8,7 +8,7 @@ def main():
     task_manager = TaskManager()
 
     while True:
-        print("\n===== Ultra Task Manager =====")
+        print("\n===== Task Manager =====")
         print("1. List Tasks")
         print("2. Create a Task")
         print("3. Update a Task")
@@ -56,10 +56,14 @@ def main():
             filter_type = input("Type the type of filter (Category, Priority or Deadline): ").lower()
             filter_value = input(f"Type the value to filter by {filter_type}: ")
             task_manager.filter_tasks(filter_type, filter_value)
-#Option 8: Exit the program
-        elif choice == "8":
+        #Option 6: clasify
+        elif choice =="6":
+         classification_type = input("Enter the classification type: ")
+         task_manager.clasify_task(classification_type)
+          #Option 8: Exit the program
+        elif choice == "7":
             print("Exiting, please wait...")
-            break
+            break  
         else:
 #Handles invalid input
             print("Invalid choice. Please choose a number from the menu.")

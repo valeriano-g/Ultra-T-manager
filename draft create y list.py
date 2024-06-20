@@ -2,67 +2,75 @@ import json
 import os
 import uuid
 
-
-
-
-
 # Global variables
 tasklocation = "./dataBase.json"
 
-description = input("Enter task description: ")
-deadline = input("Enter deadline: ")
-priority = input("Enter priority: ")
-category = input("Enter category: ")
-
-def CreateTask(description, deadline, priority, category):
+# Function to create a new task
+def create_task(description, deadline, priority, category, status):
     # Generate a unique ID for the task
-    idTask = str(uuid.uuid4())
+    id_task = str(uuid.uuid4())
 
     # Create a dictionary representing the new task
-    newTask = {
-        "id": idTask,
+    new_task = {
+        "id": id_task,
         "description": description,
         "deadline": deadline,
         "priority": priority,
-        "category": category
+        "category": category,
+        "status": status,
     }
 
     # Read existing tasks from the JSON file
-    tasks = readTask()
+    tasks = read_task()
 
     # Add the new task to the list
-    tasks.append(newTask)
+    tasks.append(new_task)
 
     # Write the updated list of tasks to the JSON file
     write_task(tasks)
 
-def readTask():
+# Function to read tasks from the JSON file
+def read_task():
     if os.path.exists(tasklocation):
-        with open(tasklocation, 'r') as Datafile:
-            tasks = json.load(Datafile)
+        with open(tasklocation, 'r') as data_file:
+            try:
+                tasks = json.load(data_file)
+            except json.JSONDecodeError:
+                tasks = []
     else:
         tasks = []
 
     return tasks
 
+# Function to write tasks to the JSON file
 def write_task(tasks):
-    with open(tasklocation, 'w') as task:
-        json.dump(tasks, task, indent=4)
+    with open(tasklocation, 'w') as task_file:
+        json.dump(tasks, task_file, indent=4)
 
+# Function to list all tasks
 def list_tasks():
-    # Abrir el archivo de tareas y mostrar todas las tareas
-    tasks = readTask()
-    task_number = 0
-    for task in tasks:
-        task_number += 1
+    # Open the task file and display all tasks
+    tasks = read_task()
+    if not tasks:
+        print("No tasks found.")
+        return
+    
+    for i, task in enumerate(tasks, start=1):
         description = task['description']
         priority = task['priority']
         deadline = task['deadline']
         category = task['category']
-        print(f"#{task_number} Task: {description} Deadline: {deadline} Category: {category} Priority: {priority}")
+        status = task['status']
+        print(f"{"-"*10}#{i} {description} {"-"*10}\n  Category: {category} Priority: {priority}   Status: {status}   Deadline: {deadline}   ")
+
 
 # Example usage
+if __name__ == "__main__":
+    description = input("Enter task description: ")
+    deadline = input("Enter deadline: ")
+    priority = input("Enter priority (A = CRUCIAL  B = IMPORTANT   C = NOT IMPORTANT): ")
+    category = input("Enter category: ")
+    status = input("Enter status (P = PENDING  I = in progress  C = completed): ")
 
-CreateTask(description,deadline,priority,category)
-
-list_tasks()
+    create_task(description, deadline, priority, category, status)
+    list_tasks()

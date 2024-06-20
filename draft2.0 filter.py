@@ -8,12 +8,15 @@ def filter_tasks(filter_type, filter_value):
     with open('dataBase.json', 'r') as file:
         data = json.load(file)
         for task in data:
+            #filtery by category
             if filter_type == 'category' and task['category'] == filter_value:
                 task_number += 1
                 print(f"#{task_number} Task: {task['description']} Deadline: {task['deadline']} Category: {filter_value} Priority: {task['priority']}")
+                #filter by priority
             elif filter_type == 'priority' and task['priority'] == filter_value:
                 task_number += 1
                 print(f"#{task_number} Task: {task['description']} Deadline: {task['deadline']} Priority: {filter_value} Category: {task['category']}")
+                #filter by deadline
             elif filter_type == 'deadline' and task['deadline'] == filter_value:
                 task_number += 1
                 print(f"#{task_number} Task: {task['description']} Deadline: {filter_value} Priority: {task['priority']} Category: {task['category']}")

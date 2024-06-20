@@ -1,51 +1,42 @@
 [
   {
-    "id": "b41de918-f9bd-4ad0-b26f-72facf212e6c",
-    "description": "Tarea 1",
-    "deadline": "20/3/2024",
+    "id": "aa19a633-81fd-4dec-984f-33185a3f94dd",
+    "description": "ddddd",
+    "deadline": "d",
+    "priority": "",
+    "category": "d",
+    "status": "d"
+  },
+  {
+    "id": "cf45e87d-1ece-4ba6-88dd-862e49f27ee4",
+    "description": "dnsinjnd",
+    "deadline": "",
+    "priority": "w",
+    "category": "sdd",
+    "status": "f"
+  },
+  {
+    "id": "a906f611-3eb6-43b8-960a-f18e08e91b3d",
+    "description": "hacer la tarea de fundamentos del computador",
+    "deadline": "20/5/2024",
     "priority": "A",
-    "category": "escolar"
+    "category": "trabajo",
+    "status": "P"
   },
   {
-    "id": "40fc0c27-6f6d-4252-ad77-9c0bed88e6e4",
-    "description": "Tarea 2",
-    "deadline": "25/3/2024",
+    "id": "a906f611-3eb6-43b8-960a-f18e08e91b3d",
+    "description": "hacer la tarea de fundamentos",
+    "deadline": "20/5/2024",
     "priority": "B",
-    "category": "trabajo"
+    "category": "universidad",
+    "status": "P"
   },
   {
-    "id": "70ba13ca-3fb9-49d6-ba3b-dafb5b7b949b",
-    "description": "Tarea 1",
-    "deadline": "20/3/2024",
-    "priority": "A",
-    "category": "escolar"
-  },
-  {
-    "id": "fc124f34-6ba6-4b49-8abb-39218505ac18",
-    "description": "Tarea 3",
-    "deadline": "25/3/2024",
+    "id": "a906f611-3eb6-43b8-960a-f18e08e91b3d",
+    "description": "hacer la tarea de fundamentos de redes",
+    "deadline": "20/5/2024",
     "priority": "B",
-    "category": "trabajo"
-  },
-  {
-    "id": "ecd479d7-2819-48c3-8a1c-1dbae4cc2e28",
-    "description": "rosoors",
-    "deadline": "25/3/2024",
-    "priority": "E",
-    "category": "D"
-  },
-  {
-    "id": "56e5fc7d-7ed2-4727-adeb-32b7f8567e1f",
-    "description": "comer una pizza",
-    "deadline": "17/6/2024",
-    "priority": "A",
-    "category": "comida"
-  },
-  {
-    "id": "9440f3d6-8a04-4907-8327-95fd92f4e502",
-    "description": "comer un helado",
-    "deadline": "19/6/2024",
-    "priority": "B",
-    "category": "comida"
+    "category": "universidad",
+    "status": "P"
   }
 ]
